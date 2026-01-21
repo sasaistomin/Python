@@ -12,6 +12,15 @@ print(f"List sort: {listNumber}")
 listNumber.sort(reverse=True)
 print(f"List reverse: {listNumber} \n")
 
+# if in list
+numIfList = [1, 2, 3, 4]
+strIfList = ["a", "b", "c"]
+
+if 4 in numIfList:
+    print("4 in list")
+if "b" in strIfList:
+    print("b in list \n")
+
 # Copy
 listOld = [1, 2, 3]
 listNew = listOld
