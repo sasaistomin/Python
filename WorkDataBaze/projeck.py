@@ -1,16 +1,24 @@
 import psycopg2
+
 conn = psycopg2.connect(
     host="localhost",
     user="postgres",
-    password="",
+    password="sasa",
     port="5432",
     database="Name"
 )
 
-if conn:
-    print("DB work")
+print("DB")
 
-corsor = conn.cursor()
-corsor.excute("SELECT * FROM names")
-result = corsor.fetchall()
-print(result)
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM names")
+
+result = cursor.fetchall()
+
+for rol in result:
+    for item in rol:
+        print(item)
+
+cursor.close()
+conn.close()
