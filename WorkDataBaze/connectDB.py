@@ -12,13 +12,6 @@ if conn:
 
 cursor = conn.cursor()
 cursor.execute("SELECT * FROM root")
-result = cursor.fetchone()
-
-login = result[0]
-password = result[1]
-print(login, password)
-
-cursor.execute("SELECT * FROM root")
 result = cursor.fetchall()
 for row in result:
     print(row)
