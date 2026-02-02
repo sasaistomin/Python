@@ -1,24 +1,27 @@
 import psycopg2
-
 conn = psycopg2.connect(
     host="localhost",
     user="",
     password="",
     port="5432",
-    database="shop"
+    database="root"
 )
-
 if conn:
     print("Database Connected")
 
+
 cursor = conn.cursor()
-cursor.execute("INSERT INTO users(name, surname, product) VALUES ('Atum', 'Pos', 'Phone')")
+cursor.execute("SELECT * FROM root")
+result = cursor.fetchone()
 
-cursor.execute("SELECT * FROM Users")
+login = result[0]
+password = result[1]
+print(login, password)
+
+cursor.execute("SELECT * FROM root")
 result = cursor.fetchall()
-
-for rol in result:
-    print(rol)
+for row in result:
+    print(row)
 
 cursor.close()
 conn.close()
