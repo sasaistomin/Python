@@ -31,7 +31,7 @@ if conn.commit():
 
 cursor.execute("SELECT * FROM root")
 result = cursor.fetchall()
-name = result[1][0]
+name = result[2][0]
 password = result[1][1]
 print(name)
 print(password)
