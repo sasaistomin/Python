@@ -96,5 +96,43 @@ class Website:
 
     def __str__(self):
         return f"Website: {self.__name}\nURL: {self.__url}\nDescription: {self.__description}"
+
+class Car:
+    def __init__(self, model, year, manufacturer, engine_capacity, color, price):
+        self.__model = model
+        self.__year = year
+        self.__manufacturer = manufacturer
+        self.__engine_capacity = engine_capacity
+        self.__color = color
+        self.__price = price
+    def __str__(self):
+        return (f"Модель: {self.__model}\nРік випуску: {self.__year}\nВиробник: {self.__manufacturer}\n"
+                f"Об'єм двигуна: {self.__engine_capacity}л\nКолір: {self.__color}\nЦіна: ${self.__price:.2f}")
+    
+class Book:
+    def __init__(self, title, year, publisher, genre, author, price):
+        self.__title = title
+        self.__year = year
+        self.__publisher = publisher
+        self.__genre = genre
+        self.__author = author
+        self.__price = price
+
+    def __str__(self):
+        return (f"Назва: «{self.__title}»\nАвтор: {self.__author}\nРік видання: {self.__year}\n"
+                f"Жанр: {self.__genre}\nВидавець: {self.__publisher}\nЦіна: {self.__price:.2f} грн")
+
+class Stadium:
+    def __init__(self, name, opening_date, country, city, capacity):
+        self.__name = name
+        self.__opening_date = opening_date
+        self.__country = country
+        self.__city = city
+        self.__capacity = capacity  
+          
+    def __str__(self):
+        return (f"Стадіон: {self.__name}\nДата відкриття: {self.__opening_date}\n"
+                f"Країна: {self.__country}\nМісто: {self.__city}\nМісткість: {self.__capacity} глядачів")
+
 def main():
     pass
