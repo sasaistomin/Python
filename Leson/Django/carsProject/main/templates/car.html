@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .photo {
+        width: 150px;
+    }
+</style>
+<body>
+    <div>
+        {% for key, car in data.items %}
+        <div>
+            <img class="photo" src="{% static car.photo %}" alt="">
+            <p>{{ car.name }}</p>
+            <p>{{ car.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

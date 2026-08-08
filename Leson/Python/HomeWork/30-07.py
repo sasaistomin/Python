@@ -68,16 +68,16 @@ class QuadraticEquation(AbstrackClass):
             return 'Not result (D < 0)'
 
 
-# def main():
-#     equations = [
-#         LinearEquation(a=2, b=-4),       
-#         LinearEquation(a=0, b=5),  
-#         QuadraticEquation(a=1, b=-5, c=6)
-#     ]
+def main():
+    equations = [
+        LinearEquation(a=2, b=-4),       
+        LinearEquation(a=0, b=5),  
+        QuadraticEquation(a=1, b=-5, c=6)
+    ]
 
-#     for eq in enumerate(equations, 1):
-#         print(eq.solc())
-# main()
+    for eq in enumerate(equations, 1):
+        print(eq.solc())
+main()
 
 # Задание 2
 # Создать абстрактный базовый класс с абстрактной функцией - площадь. 
