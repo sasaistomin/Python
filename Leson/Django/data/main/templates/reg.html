@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>User form</p>
+    <form action="postuser/" method="post">
+        {% csrf_token %}
+        <p>Name: <br> <input name="name"></p> 
+        <p>Age: <br> <input type="number" name="age"></p>
+        <p>Password: <br> <input type="password" name="password"></p>
+        <p>
+            Lan:<br>
+            <select name="languages" multiple>
+                <option>Python</option>
+                <option>C++</option>
+                <option>C#</option>
+                <option>Java</option>
+            </select>
+        </p>
+        <input type="submit" velue="Send"> 
+    </form>
+</body>
+</html>

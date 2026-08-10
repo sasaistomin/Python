@@ -1,0 +1,26 @@
+body{ font-family: Verdana;
+background-color: aqua;
+}
+a {
+    text-decoration: none;
+}
+h1{color:navy;}
+img{width:350px;}
+
+.mainClass {
+    display: flex;
+    gap: 10px;
+}
+
+.fMain {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input {
+    width: 300px;
+    height: 100px;
+    border-radius: 120px;
+}
