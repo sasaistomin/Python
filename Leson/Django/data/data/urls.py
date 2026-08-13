@@ -22,9 +22,11 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html"), name='index'),
-    path('list/', TemplateView.as_view(template_name="list.html"), name='list'),
-    path('contacts/', TemplateView.as_view(template_name="contacts.html"), name='contacts'),
-    path('reg/postuser/', views.postuser, name='postuser'),
-    path('reg/', TemplateView.as_view(template_name="reg.html"), name='reg'),
-    path('reg2/', views.reg2, name='reg2'),
+    path('per/', views.get_person, name='get_person'),
+    path('car/', views.setCar, name="setCar")
+    # path('list/', TemplateView.as_view(template_name="list.html"), name='list'),
+    # path('contacts/', TemplateView.as_view(template_name="contacts.html"), name='contacts'),
+    # path('reg/postuser/', views.postuser, name='postuser'),
+    # path('reg/', TemplateView.as_view(template_name="reg.html"), name='reg'),
+    # path('reg2/', views.reg2, name='reg2'),
 ]
